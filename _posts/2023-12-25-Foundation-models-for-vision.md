@@ -1,5 +1,5 @@
 ---
-title: "Foundation-Models-for-vision"
+title: "Foundation models for vision"
 date: 2023-12-25
 ---
 
