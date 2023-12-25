@@ -46,6 +46,6 @@ Grounded SAM combines open set object detection from Grouding DINO with SAM's se
 
 ## Concluding Remarks
 This post does not cover generative capabilities of Vision based Foundation Models - including but not limited to image generation, inpainting, image editing and [visual instruction tuning](https://arxiv.org/abs/2304.08485). Learning from and making sense of videos is another area where a vision foundation model should excel at - along with being inherently multimodal, videos also have a temporal aspect that needs to be accounted for. 
-It is also important to note that the aforementioned combination of methods is one way of thinking about VFM, the field is moving fast and there are numerous other techniques such as [SemanticSAM](https://arxiv.org/abs/2307.04767), [LAVIS](https://arxiv.org/abs/2209.09019), [SAM-CLIP](https://arxiv.org/abs/2310.15308), [SEEM](https://arxiv.org/abs/2304.06718) etc that have come up with their own criteria, frameworks and benchmark tasks for VFM capabilities.
+It is also important to note that the aforementioned combination of methods is one way of thinking about VFM. The field is moving fast, with many other techniques such as [SemanticSAM](https://arxiv.org/abs/2307.04767), [LAVIS](https://arxiv.org/abs/2209.09019), [SAM-CLIP](https://arxiv.org/abs/2310.15308), [SEEM](https://arxiv.org/abs/2304.06718) etc that have come up with their own criteria, frameworks and benchmark tasks for VFM capabilities.
 
 
