@@ -3,7 +3,7 @@ title: "Foundation-Models-for-vision"
 date: 2023-12-25
 ---
 
-![Computer vision model test image](assets/foundation-models-for-vision/vision_test_pic.jpeg)
+![Computer vision model test image](/assets/foundation-models-for-vision/vision_test_pic.jpeg)
 
 This image was used in [Andrej Karpathy’s blog](https://karpathy.github.io/2012/10/22/state-of-computer-vision/) in 2012 to highlight the challenges for a vision-based foundation model (VFM). To accurately understand this picture, the model has to go beyond making disconnected predictions of certain objects (such as human faces), and make sense of the interactions between those objects, spatial relationships, perform visual reasoning along with being able to ingest multimodal data. Fast forward to 2023, and we have made tremendous progress in terms of solving these problems, in large part driven by the emergence of foundation models. Indeed, it is reported that GPT-4V is able to reason about and describe the humor in this image. Assuming that this image was not in the [training set](https://x.com/karpathy/status/1635697741925064704?s=20), does it mean that vision is a solved problem? What if we ask this model to segment out only those people who are not smiling, or count the squares in the floor that are covered by shadows?
 
@@ -17,25 +17,25 @@ In this post, we will discuss ideas and themes in terms of building foundation m
 
 Next, we will discuss some approaches for solving these challenges - 
 
-## Universal Segmenter 
+### Universal Segmenter 
 [Segment Anything (SAM)](https://arxiv.org/abs/2304.02643) is a popular approach for this class of models. The components are - a heavyweight image encoder (ViT-H gives best results in SAM) that will extract features from image as a one-time operation, and a lightweight encoder that can accept different types of inputs as prompts. The interaction between the image and prompt encodings is covered via cross attention in the mask decoder. The idea is that the image features are already rich enough to contain information about all downstream tasks. The prompt tokens serve to focus on specific regions of the image. The original prompt tokens are re-added to updated tokens after every attention operation. However, the ablations around this operation and other steps that add complexity to the mask decoder are not shared.
 The training recipe is the key reason behind SAM’s performance on interactive segmentation - this interaction is simulated at the time of training itself! Specifically, once the model predicts a mask, a set of points from the error regions serve as pseudo user generated corrections for False Negatives and Positives. Next, the position encoding + learned foreground-background embeddings for these points along with the previously generated mask logits are passed to the model. SAM can also be used with text embeddings from a vision-language model like CLIP as prompts, although this version hasn’t been released open-source.
 
-![Segment Anything Model](assets/foundation-models-for-vision/SAM.png)
+![Segment Anything Model](/assets/foundation-models-for-vision/SAM.png)
 |:--:| 
-| *Segment Anything Model* |
+| *Segment Anything Model enables generation of zero-shot segmentation masks for an image* |
 
-## Vision Language Models and Grounding
+### Vision Language Models and Grounding
 Vision Language Models (VLMs), as the name implies, can ingest both language and images. A famous example is CLIP, where contrastive learning is applied on text and image embeddings. The embeddings trained through this approach are more robust to adversarial datasets and settings not commonly used in standard vision benchmarks, such as ImageNet Sketch, ObjectNet etc. However, fine-grained understanding of images and text order awareness might not be prioritized in simple contrastive learning. One approach to mitigate this is via [composition-aware hard negative mining](https://arxiv.org/abs/2210.01936). Another line of work ([GLIP](https://arxiv.org/abs/2112.03857), [Grounding DINO](https://arxiv.org/abs/2303.05499)) involves “phrase grounding” - grounding regions in the image to the corresponding phrases in the caption which leads to better localization. Additionally, in these methods, deep cross-modality fusion is performed instead of late fusion. These models are better at detecting rare categories and phrases with attributes which can be important in certain real world applications.
 
-![Grounded Language Image Pretraining](assets/foundation-models-for-vision/GLIP.png)
+![Grounded Language Image Pretraining](/assets/foundation-models-for-vision/GLIP.png)
 |:--:| 
 | *GLIP aligns specific regions in an image with their corresponding text prompts* |
 
-## Combining the Pieces: Grounded Detection + Segmentation
+### Combining the Pieces: Grounded Detection + Segmentation
 Now that we have a) method to segment a given image and b) assign given text descriptions to specific sub-regions in an image, why don’t we combine these 2 to get segmentation + open set recognition capabilities for arbitrary images? This is exactly what [Grounded-SAM](https://github.com/IDEA-Research/Grounded-Segment-Anything) does: the Grounded-DINO model produces bounding boxes for user-provided text descriptions, and these boxes are used as prompts to SAM to output segmentation masks in a zero-shot manner. Furthermore, we can train these models with text order aware hard negative examples to improve their compositional understanding, bringing us closer to fulfilling all the criteria we needed our VFM to fulfill at the beginning of this post.
 
-![Grounded SAM](assets/foundation-models-for-vision/Grounded-SAM.png)
+![Grounded SAM](/assets/foundation-models-for-vision/Grounded-SAM.png)
 |:--:| 
 | *Grounded SAM combines open set object detection from Grouding DINO with SAM's segmentation capabilities* |
 
