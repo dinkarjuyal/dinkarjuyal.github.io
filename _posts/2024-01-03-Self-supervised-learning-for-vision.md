@@ -25,3 +25,13 @@ The need for positive and negative pairs within the same batch meant that these 
 <p align="center">
 Comparison between Contrastive Learning and Masked Image Modeling (<a href="https://github.com/naver-ai/cl-vs-mim">Source</a>)
 </p>
+
+### Link between temperature and number of classes- 
+In CL, the temperature term serves to sharpen the output values, with a temperature -> 0 corresponding to one-hot representations. The gradient term of the loss shows that lower values of temperature lead to higher penalty values for hard-negative examples. 
+
+![CL gradients](/assets/self-supervised-learning-for-vision/cl_loss_weights.png)
+<p align="center">
+Differnt contrastive losses and the impact of temperature on loss gradients (<a href="https://arxiv.org/abs/2002.05709">Source</a>)
+</p>
+
+Temperature is a crucial parameter, with CL based methods demonstrating a dramatic sensitivity to its values <optional, DINO temperature ablation and comment about student and teacher differences>.  
