@@ -26,7 +26,7 @@ The need for positive and negative pairs within the same batch meant that these 
 Comparison between Contrastive Learning and Masked Image Modeling (<a href="https://github.com/naver-ai/cl-vs-mim">Source</a>)
 </p>
 
-### Link between temperature and number of classes- 
+### Link between temperature and number of classes
 In CL, the temperature term serves to sharpen the output values, with a temperature -> 0 corresponding to one-hot representations. The gradient term of the loss shows that lower values of temperature lead to higher penalty values for hard-negative examples. 
 
 ![CL gradients](/assets/self-supervised-learning-for-vision/cl_loss_weights.png)
@@ -34,4 +34,11 @@ In CL, the temperature term serves to sharpen the output values, with a temperat
 Differnt contrastive losses and the impact of temperature on loss gradients (<a href="https://arxiv.org/abs/2002.05709">Source</a>)
 </p>
 
-Temperature is a crucial parameter, with CL based methods demonstrating a dramatic sensitivity to its values <optional, DINO temperature ablation and comment about student and teacher differences>.  
+Temperature is a crucial parameter, with CL based methods demonstrating a dramatic sensitivity to its values. DINO, for example, uses different temperature values and schedules for its student and teacher networks. Works such as [F Wang et al](https://arxiv.org/abs/2012.09740), [T Wang et al](https://arxiv.org/abs/2005.10242) discuss the impact of temperature on the learnt representations through 2 properties - uniformity in the hypersphere which enables the learnt features to be separable, and tolerance to potential positive examples. Lower values of temperature focus on the former, thus they make more sense for datasets with larger number of classes like ImageNet, where the probability of getting a lot of potential positives in a training batch are low. By extension, the probability of getting more potential positives increases with fewer classes, thus lower values of temperature are not as beneficial. Thus, it is important to consider the number of classes for downstream tasks while picking a value for temperature.
+
+![Temperature vs num_classes](/assets/self-supervised-learning-for-vision/svhn_num_classes.png)
+<p align="center">
+Comparison of model performance at different temperatures, lower temperatures work better for datasets with larger number of classes (<a href="https://arxiv.org/abs/2012.09740">Source</a>)
+</p>
+
+
