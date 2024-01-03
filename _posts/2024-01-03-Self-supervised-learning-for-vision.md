@@ -56,3 +56,14 @@ Vanilla CL operates on flattened 1-d features and does not have any explicit spa
 Contrastive Learning can suffer from feature suppression among competing features, leading the model to learn only the dominant or easy features (<a href="https://arxiv.org/pdf/2011.02803.pdf">Source</a>)
 </p>
 
+### Pretraining and downstream task alignment
+Practitioners often care about deploying models with satisfactory performance on different tasks with low investment in terms of time/effort/resources.
+Performance of SSL pretrained embeddings on downstream tasks can depend on different factors. [Cole et al](https://arxiv.org/abs/2105.05837) study this for CL with CNN encoders on classification tasks. They find that while these representations can be effective for in-domain downstream tasks, they can suffer a degradation in performance when the domain is OOD, the downstream task is fine-grained (more number of classes) or the data has undergone specific transformations.
+![Pretraining](/assets/self-supervised-learning-for-vision/factors_pretraining.png)
+<p align="center">
+Different factors can influence the performance of pretrained backbones on downstream tasks (<a href="https://arxiv.org/abs/2105.05837">Source</a>)
+</p>
+
+Regarding imbalanced classification, the jury is divided - [Assran et al](https://arxiv.org/abs/2210.07277) mentions that SSL methods place a uniform prior on the data and thus underperforms on unbalanced datasets, while [Liu et al](https://arxiv.org/pdf/2110.05025.pdf) states that SSL enables the model to better learn the intrinsic structures in the data (aka multi-view hypothesis) which translates to better performance on rare classes. Although not self-supervised, works such as [Wang et al](https://arxiv.org/abs/2103.14267), [Juyal et al](https://arxiv.org/abs/2303.13405) demonstrate improvements on long-tailed and imbalanced datasets with a gradual weight transfer from supervised contrastive loss to cross-entropy at training time.
+
+
