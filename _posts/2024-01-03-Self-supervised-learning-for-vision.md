@@ -41,7 +41,18 @@ Temperature is a crucial parameter, with CL based methods demonstrating a dramat
 Comparison of model performance at different temperatures, lower temperatures work better for datasets with larger number of classes (<a href="https://arxiv.org/abs/2012.09740">Source</a>)
 </p>
 
+### Augmentations 
+Augmentations are important in terms of deciding the invariances of the learnt representations. A key augmentation for both CL and MIM based methods is cropping. SimCLR mentions the importance of local crops + color jitter to learn how to predict neighboring views while avoiding trivial solutions like matching color histograms. Similarly, DINO passes only the local crops through the student and all crops through the teacher to learn ‘global-to-local’ correspondences. The best results are obtained with a relative local crop size of (0.05, 0.32) for both iBOT and DINO, and these trends are consistent for [images which may not have a central object of interest](https://www.medrxiv.org/content/10.1101/2023.07.21.23292757v1).
+
 ### Projector and invariance to augmentations
 The importance of projector has been recognized since SimCLR, where adding a MLP projection head and then using the input features instead of outputs improves performance on downstream tasks by >10%. [Guillotine regularization](https://arxiv.org/abs/2206.13378) formulates this as a generic last k-layers removal task, and highlight the importance of removing more layers when there is a misalignment in terms of downstream prediction task/data distribution. [Gupta et al](https://arxiv.org/pdf/2212.11491.pdf) posits that the projector learns a feature subspace to apply contrastive loss, thus preventing the backbone features (i.e, input to projector) to be augmentation-invariant (augmentations can be sub-optimal for certain tasks).
 This means those representations can align better to a wider range of downstream tasks. 
 This might also explain why [CLIP training relies on a linear projector](https://arxiv.org/abs/2103.00020) and uses only a random crop as an augmentation, since the training set size is order of magnitudes larger and the aim is to learn generalizable features.
+
+### Extension to tasks beyond classification 
+Vanilla CL operates on flattened 1-d features and does not have any explicit spatial understanding baked in. [Chen et al](https://arxiv.org/pdf/2011.02803.pdf) showed that CL learns features of only the dominant object or easy-to-learn features at the expense of other information in the image, which can be detrimental to certain tasks. Modifications to CL have been suggested that apply losses to the dense feature vectors and use location-based matching along with feature matching to yield local features that are invariant to the given transformations ([VicRegL](https://arxiv.org/abs/2210.01571)). ViT based approaches meanwhile, by virtue of their design choice, focus on smaller patches within an image and use positional embeddings. Indeed, features from DINO describe object boundaries without any supervision, and [Park et al](https://arxiv.org/abs/2305.00729) show that CL works well for linear probing and classification tasks with smaller models, whereas MIM outperforms CL in fine-tuning and dense prediction tasks with larger models.
+![Competing features](/assets/self-supervised-learning-for-vision/CL_competing_features.png)
+<p align="center">
+Contrastive Learning can suffer from feature suppression among competing features, leading the model to learn only the dominant or easy features (<a href="https://arxiv.org/pdf/2011.02803.pdf">Source</a>)
+</p>
+
