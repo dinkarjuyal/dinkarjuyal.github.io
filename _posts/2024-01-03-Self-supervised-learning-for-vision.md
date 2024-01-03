@@ -41,4 +41,7 @@ Temperature is a crucial parameter, with CL based methods demonstrating a dramat
 Comparison of model performance at different temperatures, lower temperatures work better for datasets with larger number of classes (<a href="https://arxiv.org/abs/2012.09740">Source</a>)
 </p>
 
-
+### Projector and invariance to augmentations
+The importance of projector has been recognized since SimCLR, where adding a MLP projection head and then using the input features instead of outputs improves performance on downstream tasks by >10%. [Guillotine regularization](https://arxiv.org/abs/2206.13378) formulates this as a generic last k-layers removal task, and highlight the importance of removing more layers when there is a misalignment in terms of downstream prediction task/data distribution. [Gupta et al](https://arxiv.org/pdf/2212.11491.pdf) posits that the projector learns a feature subspace to apply contrastive loss, thus preventing the backbone features (i.e, input to projector) to be augmentation-invariant (augmentations can be sub-optimal for certain tasks).
+This means those representations can align better to a wider range of downstream tasks. 
+This might also explain why [CLIP training relies on a linear projector](https://arxiv.org/abs/2103.00020) and uses only a random crop as an augmentation, since the training set size is order of magnitudes larger and the aim is to learn generalizable features.
