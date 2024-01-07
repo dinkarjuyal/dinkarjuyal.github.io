@@ -3,6 +3,9 @@ title: "Foundation models for vision"
 date: 2023-12-25
 ---
 
+* TOC
+{:toc}
+
 <p align="center">
 <img src="/assets/foundation-models-for-vision/vision_test_pic.jpeg">
 </p>
@@ -38,7 +41,7 @@ GLIP aligns specific regions in an image with their corresponding text prompts
 </p>
 
 ### Combining the Pieces: Grounded Detection + Segmentation
-Now that we have a) method to segment a given image and b) assign given text descriptions to specific sub-regions in an image, why don’t we combine these 2 to get segmentation + open set recognition capabilities for arbitrary images? This is exactly what [Grounded-SAM](https://github.com/IDEA-Research/Grounded-Segment-Anything) does: the Grounded-DINO model produces bounding boxes for user-provided text descriptions, and these boxes are used as prompts to SAM to output segmentation masks in a zero-shot manner. Furthermore, we can train these models with text order aware hard negative examples to improve their compositional understanding, bringing us closer to fulfilling all the criteria we needed our VFM to fulfill at the beginning of this post.
+Now that we have a) method to segment a given image and b) assign given text descriptions to specific sub-regions in an image, why don’t we combine these 2 to get segmentation + open set recognition capabilities for arbitrary images? This is exactly what [Grounded-SAM](https://github.com/IDEA-Research/Grounded-Segment-Anything) does: the Grounded-DINO model produces bounding boxes for user-provided text descriptions, and these boxes are used as prompts to SAM to output segmentation masks in a zero-shot manner (Alternatively, we could have also performed a per-pixel correlation maximization between the text and image embeddings to directly get an open-set semantic map, which is what [LSeg](https://arxiv.org/pdf/2201.03546.pdf) does). Furthermore, we can train these models with text order aware hard negative examples to improve their compositional understanding, bringing us closer to fulfilling all the criteria we needed our VFM to fulfill at the beginning of this post. 
 
 ![Grounded SAM](/assets/foundation-models-for-vision/Grounded-SAM.png)
 <p align="center">
