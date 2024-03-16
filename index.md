@@ -1,4 +1,4 @@
-I am a Senior ML Engineer at PathAI in Boston, with a focus on self-supervised learning, data efficient methods, robustness to distribution shifts and real-world applications of ML in healthcare. Some examples of past work -
+I am a Senior ML Researcher and Engineer at PathAI in Boston, with a focus on self-supervised learning, data efficient methods, robustness to distribution shifts and real-world applications of ML in healthcare. Some examples of past work -
 
 * **Novel ML methods research** -
   + *Domain generalization* - ContriMix (Best official submission in [Camelyon17 Stanford WILDS](https://wilds.stanford.edu/leaderboard/#camelyon17) leaderboard)
