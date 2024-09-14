@@ -5,9 +5,13 @@ I am a Staff ML Researcher and Engineer at PathAI in Boston, with a focus on fou
   + *Domain generalization* - ContriMix (Best-performing official submission in [Camelyon17 Stanford WILDS](https://wilds.stanford.edu/leaderboard/#camelyon17) leaderboard)
   + *Label Imbalance* - [Supervised Contrastive MIL](https://openaccess.thecvf.com/content/WACV2024/papers/Juyal_SC-MIL_Supervised_Contrastive_Multiple_Instance_Learning_for_Imbalanced_Classification_in_WACV_2024_paper.pdf) (WACV 2024)
   + *Interpretability* - [Additive Multiple Instance Learning](https://proceedings.neurips.cc/paper_files/paper/2022/file/82764461a05e933cc2fd9d312e107d12-Paper-Conference.pdf) (NeurIPS 2022)
+  + [Interpretability analysis on a pathology foundation model reveals biologically relevant embeddings across modalities
+](https://arxiv.org/html/2407.10785v1) (ICML Mechanistic Interpretability Workshop 2024)
 
 
 * **Application of ML to medical imaging** -
+  + *Clinical trials for liver disease* - [AI-based automation of enrollment criteria and endpoint assessment in clinical trials in liver diseases](https://www.nature.com/articles/s41591-024-03172-7) (Nature Medicine 2024)
+
   + *ML Evaluation* - [Rethinking ML model evaluation in pathology](https://ml-eval.github.io/assets/pdf/Evaluation_of_ML_for_Pathology.pdf) (ICLR ML Evaluation Standards Workshop 2022)
   + *ML to predict clinically significant portal hypertension in NASH cirrhosis* - [Journal of Hepatology](https://aasldpubs.onlinelibrary.wiley.com/doi/abs/10.1002/hep.32087)
  
