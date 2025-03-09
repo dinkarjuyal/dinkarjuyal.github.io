@@ -1,6 +1,6 @@
 ---
-title: "Self-Supervised Learning for vision"
-date: 2023-01-03
+title: "Observations on self-supervised Learning for vision"
+date: 2025-01-03
 ---
 
 * TOC
