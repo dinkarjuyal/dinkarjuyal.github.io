@@ -15,7 +15,7 @@ Humans tackle this by zooming in and out, scanning for relevant clues. AI models
 <em>Using o3 to predict bounding boxes for the prompt - "Identify people playing with red and white striped ball". In this case, the model, while having mostly correct intermediate reasoning, is unable to localize the boxes correctly.</em>
 </div>
 
-### Two Paths for Vision: Understanding vs. Generating
+### Understanding vs. Generation in Vision
 For a long time, computer vision followed two parallel paths. One focused on understanding images – identifying what’s in an image and where it is. The other path tried having machines generate pictures from scratch. These two paths developed largely separately, but recently they are converging. To appreciate how we got here, let’s briefly recap some key advances in image generative models:
 
 • __Variational Autoencoders (VAEs)__: VAEs were among the first modern generative models that learned to compress images into a latent code and then reconstruct them. They optimized a probabilistic lower bound, but often produced blurry outputs. A big issue was posterior collapse – the decoder would sometimes become too powerful and learn to ignore the latent representation. The result? The latent space carried little meaningful information.
