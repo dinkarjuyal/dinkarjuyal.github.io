@@ -1,5 +1,5 @@
 ---
-title: "Observations on self-supervised Learning for vision"
+title: "Observations on self-supervised learning for vision"
 date: 2025-01-03
 ---
 
