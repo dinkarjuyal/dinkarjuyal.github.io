@@ -1,4 +1,4 @@
-I am a Staff ML Researcher and Engineer at PathAI in Boston, with a focus on foundation models, multimodal methods, robustness to distribution shifts and applications of ML in real-world systems. Some examples of past work -
+I am a Staff ML Researcher and Engineer at PathAI, with a focus on foundation models, representation learning, computer vision and applications of ML in real-world systems. Some examples of past work -
 
 * **Novel ML methods research** -
   + *Foundation Models* - [PLUTO](https://arxiv.org/abs/2405.07905): a scalable & performant Foundation Model for pathology (accepted in following workshops in ICML 2024 - [ML for life and material science](https://ml4lms.bio/), [Foundation models in the wild](https://icml-fm-wild.github.io/) and [Accessible and efficient foundation models for biological discovery](https://accml.bio/index.html) ) 
@@ -8,12 +8,11 @@ I am a Staff ML Researcher and Engineer at PathAI in Boston, with a focus on fou
   + [Interpretability analysis on a pathology foundation model reveals biologically relevant embeddings across modalities
 ](https://arxiv.org/html/2407.10785v1) (ICML Mechanistic Interpretability Workshop 2024)
 
+* **Agentic evaluation framework**
+  + *AI agents as ML engineers* - [ML-Dev-Bench: Comparative Analysis of AI Agents on ML development workflows](https://arxiv.org/abs/2502.00964) (ICLR 2025 Deep Learning for Code Workshop) [Github](https://github.com/ml-dev-bench/ml-dev-bench)
 
 * **Application of ML to medical imaging** -
   + *Clinical trials for liver disease* - [AI-based automation of enrollment criteria and endpoint assessment in clinical trials in liver diseases](https://www.nature.com/articles/s41591-024-03172-7) (Nature Medicine 2024)
-
-  + *ML Evaluation* - [Rethinking ML model evaluation in pathology](https://ml-eval.github.io/assets/pdf/Evaluation_of_ML_for_Pathology.pdf) (ICLR ML Evaluation Standards Workshop 2022)
-  + *ML to predict clinically significant portal hypertension in NASH cirrhosis* - [Journal of Hepatology](https://aasldpubs.onlinelibrary.wiley.com/doi/abs/10.1002/hep.32087)
  
 * **Talks and interviews** -
   + *PyTorch Conference 2023* - [Lightning talk on domain generalization in medical imaging](https://www.youtube.com/watch?v=kVr_uBXIHa0)
