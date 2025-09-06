@@ -1,4 +1,4 @@
-I am a Staff ML Researcher and Engineer at PathAI, with a focus on foundation models, representation learning, computer vision and applications of ML in real-world systems. Some examples of past work -
+I am a ML Engineer at Meta working on agentic systems. Previously, I was a Staff ML Researcher and Engineer at PathAI, with a focus on foundation models and computer vision. Some examples of past work -
 
 * **Novel ML methods research** -
   + *Foundation Models* - [PLUTO](https://arxiv.org/abs/2405.07905): a scalable & performant Foundation Model for pathology (accepted in following workshops in ICML 2024 - [ML for life and material science](https://ml4lms.bio/), [Foundation models in the wild](https://icml-fm-wild.github.io/) and [Accessible and efficient foundation models for biological discovery](https://accml.bio/index.html) ) 
