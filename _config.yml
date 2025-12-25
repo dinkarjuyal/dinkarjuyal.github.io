@@ -13,6 +13,7 @@ plugins:
   - jekyll-paginate
   - jekyll-remote-theme
   - jekyll-scholar
+  - jekyll-toc
 
 # Theme settings
 author:
