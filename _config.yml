@@ -12,6 +12,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-remote-theme
+  - jekyll-scholar
 
 # Theme settings
 author:
@@ -43,3 +44,7 @@ collections:
     output: true
   projects:
     output: true
+
+# Markdown processor
+markdown: kramdown
+highlighter: rouge

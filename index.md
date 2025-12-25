@@ -1,3 +1,7 @@
+---
+layout: about
+---
+
 I am a ML Engineer at Meta working on agentic systems. Previously, I was a Staff ML Researcher and Engineer at PathAI, with a focus on foundation models and computer vision. Some examples of past work -
 
 * **Novel ML methods research** -
