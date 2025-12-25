@@ -1,1 +1,45 @@
-theme: minima
+# Site settings
+title: Dinkar Juyal
+description: Personal website of Dinkar Juyal
+url: https://dinkarjuyal.github.io
+baseurl: ""
+
+# Build settings
+remote_theme: alshedivat/al-folio
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-remote-theme
+
+# Theme settings
+author:
+  name: Dinkar Juyal
+  email: # your email (optional)
+  twitter: dinkar_juyal
+  github: dinkarjuyal
+  linkedin: dinkarjuyal1
+  google_scholar: WOJgVp4AAAAJ
+
+# Social links (will appear in footer)
+social:
+  - icon: fab fa-github
+    link: https://github.com/dinkarjuyal
+  - icon: fab fa-linkedin
+    link: https://www.linkedin.com/in/dinkarjuyal1/
+  - icon: fab fa-twitter
+    link: https://twitter.com/dinkar_juyal
+  - icon: ai ai-google-scholar
+    link: https://scholar.google.com/citations?user=WOJgVp4AAAAJ
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  news:
+    output: true
+  projects:
+    output: true
