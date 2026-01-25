@@ -2,9 +2,14 @@
 layout: about
 ---
 
+[LinkedIn](https://www.linkedin.com/in/dinkarjuyal1/)
+[Google Scholar](https://scholar.google.com/citations?user=WOJgVp4AAAAJ&hl=en)
+[X](https://twitter.com/dinkar_juyal)
+[Substack](https://dinkarjuyal.substack.com/)
+
 I am a ML Engineer at Meta working on agentic systems. Previously, I was a Staff ML Researcher and Engineer at PathAI, with a focus on foundation models and computer vision. Some examples of past work -
 
-* **Novel ML methods research** -
+* **ML methods** -
   + *Foundation Models* - [PLUTO](https://arxiv.org/abs/2405.07905): a scalable & performant Foundation Model for pathology (accepted in following workshops in ICML 2024 - [ML for life and material science](https://ml4lms.bio/), [Foundation models in the wild](https://icml-fm-wild.github.io/) and [Accessible and efficient foundation models for biological discovery](https://accml.bio/index.html) ) 
   + *Domain generalization* - ContriMix (Best-performing official submission in [Camelyon17 Stanford WILDS](https://wilds.stanford.edu/leaderboard/#camelyon17) leaderboard)
   + *Label Imbalance* - [Supervised Contrastive MIL](https://openaccess.thecvf.com/content/WACV2024/papers/Juyal_SC-MIL_Supervised_Contrastive_Multiple_Instance_Learning_for_Imbalanced_Classification_in_WACV_2024_paper.pdf) (WACV 2024)
@@ -23,7 +28,5 @@ I am a ML Engineer at Meta working on agentic systems. Previously, I was a Staff
   + *ML Seminar Series, University of Minnesota* - [AI for digital pathology](https://cse.umn.edu/dsi/events/machine-learning-seminar-series-dinkar-juyal-and-andrew-walker-pathai)
   + *Fung Institute of Engineering Leadership, UC Berkeley* - [Alumnus interview](https://funginstitute.berkeley.edu/news/dinkar-juyal-meng-19-ieor-i-hope-to-address-healthcare-challenges-by-leveraging-machine/)
 
-[LinkedIn](https://www.linkedin.com/in/dinkarjuyal1/)
-[Google Scholar](https://scholar.google.com/citations?user=WOJgVp4AAAAJ&hl=en)
-[X](https://twitter.com/dinkar_juyal)
+
  
