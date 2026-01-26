@@ -1,6 +1,6 @@
 ---
 title: "Evaluation for Agentic AI"
-date: 2026-01-25
+date: 2025-01-25
 ---
 
 * TOC
