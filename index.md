@@ -23,10 +23,10 @@ I am a ML Engineer at Meta working on agentic systems. Previously, I was a Staff
 * **Application of ML to medical imaging** -
   + *Clinical trials for liver disease* - [AI-based automation of enrollment criteria and endpoint assessment in clinical trials in liver diseases](https://www.nature.com/articles/s41591-024-03172-7) (Nature Medicine 2024)
  
-* **Talks and interviews** -
-  + *PyTorch Conference 2023* - [Lightning talk on domain generalization in medical imaging](https://www.youtube.com/watch?v=kVr_uBXIHa0)
+* **Talks and articles** -
+  +  *PyTorch Conference 2023* - [Lightning talk on domain generalization in medical imaging](https://www.youtube.com/watch?v=kVr_uBXIHa0)
   + *ML Seminar Series, University of Minnesota* - [AI for digital pathology](https://cse.umn.edu/dsi/events/machine-learning-seminar-series-dinkar-juyal-and-andrew-walker-pathai)
-  + *Fung Institute of Engineering Leadership, UC Berkeley* - [Alumnus interview](https://funginstitute.berkeley.edu/news/dinkar-juyal-meng-19-ieor-i-hope-to-address-healthcare-challenges-by-leveraging-machine/)
+  
 
 
  
