@@ -35,3 +35,14 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Jekyll build output #
+########################
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Gemfile.lock is platform-specific (native extensions); let each
+# environment (CI, local) resolve its own instead of committing one.
+Gemfile.lock

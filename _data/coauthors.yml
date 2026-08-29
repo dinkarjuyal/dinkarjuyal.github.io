@@ -1,0 +1,2 @@
+# maps a lowercase, accent-stripped last name to co-author profile URLs
+# used by _layouts/bib.liquid to link co-author names

@@ -1,0 +1,27 @@
+"NatMed":
+  url: https://www.nature.com/nm/
+  color: "#00629B"
+
+"WACV":
+  url: https://wacv2024.thecvf.com/
+  color: "#8E44AD"
+
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#B31B1B"
+
+"ICML-WKSHP":
+  url: https://icml.cc/
+  color: "#2E86AB"
+
+"ICLR-WKSHP":
+  url: https://iclr.cc/
+  color: "#27AE60"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#666666"
+
+"WILDS":
+  url: https://wilds.stanford.edu/leaderboard/#camelyon17
+  color: "#D35400"
