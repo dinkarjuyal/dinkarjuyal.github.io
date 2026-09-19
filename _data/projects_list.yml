@@ -1,0 +1,26 @@
+# Ongoing projects, shown on the about page (see _includes/projects.liquid).
+# Blurbs are drafted from each repo's own README -- update alongside the repo.
+
+- title: "CDBench"
+  description: >-
+    Controlled multi-fault debugging benchmark: injects N simultaneous bugs into real
+    open-source library code and measures fix rate as N scales from 1 to 10. A GRPO-trained
+    7B model with iterative repair closes part of the gap to a 32B dense ceiling.
+  url: https://github.com/dinkarjuyal/cdbench
+  github: https://github.com/dinkarjuyal/cdbench
+
+- title: "tiny-vlm-lab"
+  description: >-
+    A minimal, NanoChat-style vision-language lab: synthetic grid-world scenes with exact
+    ground truth, fast CPU training, and explicit checks for whether a small VLM is actually
+    grounding language in the image rather than guessing from text alone.
+  url: https://github.com/dinkarjuyal/tiny-vlm-lab
+  github: https://github.com/dinkarjuyal/tiny-vlm-lab
+
+- title: "benchmark-creator"
+  description: >-
+    Turn any GitHub repo into a behavioral benchmark for LLMs in one command: reads the
+    library's README, extracts behavioral rules, and runs an adversarial two-player game to
+    find execution-verified questions where a model knows a rule but misapplies it.
+  url: https://github.com/dinkarjuyal/benchmark-creator
+  github: https://github.com/dinkarjuyal/benchmark-creator

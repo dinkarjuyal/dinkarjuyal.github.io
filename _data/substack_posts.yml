@@ -1,0 +1,21 @@
+# Recent posts from https://dinkarjuyal.substack.com/ -- shown as an image card grid
+# on the about page (see _includes/substack_posts.liquid). Update this list when new
+# posts go out; newest first.
+
+- title: "Curiosity, Inspiration and Exploration"
+  description: "Adding curiosity as a trait in agentic systems."
+  url: https://dinkarjuyal.substack.com/p/curiosity-inspiration-and-exploration
+  img: https://substackcdn.com/image/fetch/$s_!gCMy!,w_320,h_213,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb798a33c-40d8-44c3-a2a2-91a2b1c2e5b0_1302x536.png
+  date: 2026-08-29
+
+- title: "Verification Loops, Documented Context"
+  description: "The two things that matter for E2E agentic AI for knowledge work."
+  url: https://dinkarjuyal.substack.com/p/verification-loops-documented-context
+  img: https://substackcdn.com/image/fetch/$s_!wPUk!,w_320,h_213,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcaf8f398-1938-415d-adf3-3eb907e449d6_1536x1024.png
+  date: 2026-02-16
+
+- title: "Evaluation for Agentic AI"
+  description: "How benchmarks and evaluation strategies have changed as we move from LLMs to agents, and what lies ahead."
+  url: https://dinkarjuyal.substack.com/p/evaluation-for-agentic-ai
+  img: https://substackcdn.com/image/fetch/$s_!isN2!,w_320,h_213,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe219f65c-2cf7-4ddc-a637-8a69ee792292_1537x1024.png
+  date: 2026-01-25

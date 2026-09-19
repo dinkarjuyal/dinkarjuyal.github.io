@@ -48,6 +48,30 @@ layout: default
       {% include news.liquid limit=true %}
     {% endif %}
 
+    <!-- Ongoing projects -->
+    {% if page.projects and page.projects.enabled %}
+      <h2>ongoing projects</h2>
+      <p>A few things I'm actively building and experimenting with:</p>
+      <div class="row row-cols-1 row-cols-md-3">
+        {% for project in site.data.projects_list %}
+          {% include projects.liquid project=project %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Substack -->
+    {% if page.substack_posts and page.substack_posts.enabled %}
+      <h2>
+        <a href="https://dinkarjuyal.substack.com/" target="_blank" rel="noopener noreferrer" style="color: inherit">writing on substack</a>
+      </h2>
+      <p>
+        Recent essays are published on
+        <a href="https://dinkarjuyal.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+        before anywhere else &mdash; that's where to find the newest posts.
+      </p>
+      {% include substack_posts.liquid limit=page.substack_posts.limit %}
+    {% endif %}
+
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>

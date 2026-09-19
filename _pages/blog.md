@@ -18,6 +18,12 @@ pagination:
 
 <div class="post">
 
+  <p>
+    Recent posts are published on
+    <a href="https://dinkarjuyal.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+    first; this page mirrors a subset of them.
+  </p>
+
   <ul class="post-list">
     {% if page.pagination.enabled %}
       {% assign postlist = paginator.posts %}

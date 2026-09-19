@@ -1,0 +1,33 @@
+<div class="row row-cols-1 row-cols-md-3">
+  {% assign posts = site.data.substack_posts %}
+  {% if include.limit %}
+    {% assign posts = posts | slice: 0, include.limit %}
+  {% endif %}
+  {% for post in posts %}
+    <div class="col mb-4">
+      <a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="card h-100 hoverable">
+          <img src="{{ post.img }}" class="card-img-top" alt="{{ post.title }} thumbnail" loading="lazy" />
+          <div class="card-body">
+            <h3 class="card-title" style="font-size: 1.1rem">{{ post.title }}</h3>
+            <p class="card-text">{{ post.description }}</p>
+            <p class="post-meta">
+              {{ post.date | date: '%B %d, %Y' }}
+              <svg width="1rem" height="1rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="margin-left: 0.25rem; vertical-align: middle">
+                <path
+                  d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+                  stroke="#999"
+                  stroke-width="1.5"
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+</div>
